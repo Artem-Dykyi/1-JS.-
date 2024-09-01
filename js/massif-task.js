@@ -38,14 +38,16 @@ for (let i = 0; i < fiveString.length; i++) {
 
 
 
-const maxNumber = [1, 2, 10, 4, 5, 33, 7, 8, 9, 12];
-// const maxNumberResult = maxNumber.Math.max(maxNumber)
-const maxNumberResult = Math.max(...maxNumber)
-console.log(maxNumberResult)
-// цей приклад я шукав в інтернкті так як не міг зрозуміти 
-// чому не працює Math.max(maxNumber) а потім побачив що для 
-// того щоб звернутись потрібно використати ... 
-
+const everNumber = [1, 2, 10, 4, 5, 33, 7, 8, 9, 12];
+let bigEverNum = 0;
+for (let i = 0; i < everNumber.length; i ++) {
+    if (everNumber[i] > bigEverNum) {
+        bigEverNum = everNumber[i]
+    } else {
+        continue
+    }
+}
+console.log(bigEverNum)
 
 
 const divideNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];

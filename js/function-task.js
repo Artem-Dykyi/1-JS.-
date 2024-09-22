@@ -1,16 +1,3 @@
-// const logItemsTest = logItems(friensLogItem) {
-// let friensLogItem = ["Mango", "Poly", "Ajax"]
-// for (let i = 0; i < friensLogItem.length; i++) {
-
-// messageFriensLog = 1
-// mesResuFritnLog += mesResuFritnLog
-// console.log(mesResuFritnLog)
-// return mesResuFritnLog
-// }
-// }
-
-
-
 const logItemsName = ["Mango", "Poly", "Ajax"]
 
 function logItems(array) {
@@ -24,21 +11,16 @@ logItems(logItemsName )
 ////////////////////////////////////////////////////////////
 
 
-// const fixPriceEngravinCalc = 20
-// const calculateEngravinPrice = function(messge, pricePerWord) {
-//     const bigMessageCalc = prompt("WOrd write").split("")
-//     const fullMessageCalcu = bigMessageCalc.length
-//     console.log(fullMessageCalcu)
-//     return messge * pricePerWord
-// };
+const fixPriceEngravinCalc = 20
+const calculateEngravinPrice = function(pricePerWord, messge) {
+    return  pricePerWord * messge.length
+};
 
-// console.log(calculateEngravinPrice(4, fixPriceEngravinCalc))
+console.log(calculateEngravinPrice(fixPriceEngravinCalc, "dd" ))
 
-// я не памятаю як помножити довжину масиву на число(якщо це можна) 
-//після того як я зможу це зробити розвяжу задажу
+// таке просте завдання а я його дак довго розписував)
 
 //////////////////////////////////////////////////////////
-
 
 const findLogestWord = function(string) {
     const newArryFindLogest = string.split(" ")
@@ -53,34 +35,27 @@ const findLogestWord = function(string) {
     return longestWorldFindLoges
 }
 
-// якщо перщий поділ спліт більший залишаємо якшо менщий пропускаємо 
-// поділення на слова та знаходження довжини кожного слова після цього порівнняння цих слів з іншими
 const inputSomeTextFindLogest = prompt("Введіть речення - скажемо найдовше слово")
-
 console.log(findLogestWord(inputSomeTextFindLogest))
 
 /////////////////////////////////////////////////////
 
-
-// якщо більше 40 символів не виводити 
-
-
 const formatString = function (string) {
     for (let i = 0; i < string.length; i++) {
         if (string.length <= 40)
-            console.log(string)
+        return string
     else  {
         console.log("big nizh 40")
+        return string.slice(0, 40) + "..."
     }
-    return string
+    
+
 }
 }
 
-console.log(formatString("jfffffkkkkkkkkkkkkkkkkkkkkkklllllllllllllllllllllllllk"))
+console.log(formatString("jfffffkkkkkkwmmmmmmmssdddwwwwwwwwwwwwwwwwwwwwwdddd"))
 
-// його нада зробити так щоб воно обрізалось і додавало ... але я не памятаю як це робити
-
-
+///////////////////////////////////////////////////////
 
 const formatStringSecond = function(messge) {
     return messge.includes("spam") || messge.includes("sale")
@@ -88,5 +63,18 @@ const formatStringSecond = function(messge) {
 console.log(formatStringSecond("spam is"))
 console.log(formatStringSecond("sddddaled is"))
 
+//////////////////////////////////////////////////////////
 
+let inputPleas = prompt("Введіть число")
+console.log(inputPleas)
+
+const pleasSumNumber = function(inputPleas) {
+    
+    let numbersPleas = []
+    let totalPleas = 0
+    for (let i = 0; i < inputPleas; i++) {
+        totalPleas += numbersPleas[i]
+    }
+    console.log(totalPleas)
+}
 

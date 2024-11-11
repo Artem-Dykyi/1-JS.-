@@ -24,21 +24,24 @@ console.log(guessNum())
 // я не розумію як це зробти (3)
 
 
-// const applyCallbackToEachEle = (arr, callback) => {
-   
-// }
-
-// const arr = [1, 2, 3, 4, 5]
-// const squareCallback = [];
-
-// const result = applyCallbackToEachEle(arr, squareCallback);
-// console.log(result)
+const applyCallbackToEachEle = (arr, callback) => {
+    const resultArray = []; 
+    for (let i = 0; i < arr.length; i++) {
+        resultArray.push(callback(arr[i])); 
+    }
+    return resultArray; 
+}
 
 
+const arr = [1, 2, 3, 4, 5];
+
+const squareCallback = (num) => num * num;
 
 
+const result = applyCallbackToEachEle(arr, squareCallback);
+console.log(result); 
 
-
+/////////////////////////////////////////////////////////
 const calcDiscPrice = (price, discount, callback) =>{
 const resultThis = price * discountWrite
 const secondResult = price - resultThis

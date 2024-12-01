@@ -26,5 +26,7 @@ const accaunt = {
     }
 }
 
-console.log(accaunt.deposit(700));
-console.log(accaunt.withdraw(450));
+const { balance, transactions, getBalance, deposit, withdraw, getTransactions } = account;
+
+console.log(deposit(700));
+console.log(withdraw(450));

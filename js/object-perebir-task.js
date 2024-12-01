@@ -6,6 +6,8 @@ const firstUser = {
 
 }
 
+const {firName, firLastName, firHobby, firSubscription} = firstUser
+
 firstUser.mood = "happy"
 firstUser.firHobby = "skydiving"
 firstUser.firSubscription = false
@@ -34,6 +36,7 @@ const user2 = {
 }
 console.log(user2.lenght)
 
+const {name, age, favorColor} = user2
 
 /////////////////////////////////////////////3
 
@@ -61,7 +64,7 @@ const userThree = {
     }
 }
 
-
+const {bob, floo, skot, jim, domkrat} = userThree
 
 
 userThree.findBestEmployee();
@@ -85,6 +88,7 @@ const salaryWork = {
     }
 }
 
+const {andre, boba, nimuy, pedro} = salaryWork
 
 console.log(salaryWork.countTotalSalary())
 // в мене правильна відповідь є і вибиває весь код 
@@ -108,6 +112,11 @@ const frutsProp = [
     },
 ]
 
+const [fruitGroup1, fruitGroup2, fruitGroup3] = frutsProp;
+
+const { apple, banana } = fruitGroup1;
+const { watermelon, peach } = fruitGroup2;
+const { pinapple, strawberry } = fruitGroup3;
 
 const getAllPropValues = function(arr, prop) {
     let fullListFrut = []
@@ -131,6 +140,12 @@ const productSale = [
     {name: "cat", price: 200, quantity: 3},
     {name: "fish", price: 350, quantity: 4},
 ]
+
+const [product1, product2, product3] = productSale;
+
+const { name: name1, price: price1, quantity: quantity1 } = product1;
+const { name: name2, price: price2, quantity: quantity2 } = product2;
+const { name: name3, price: price3, quantity: quantity3 } = product3;
 
 
 const calculateTotalPrice = function(allProdcuts, productName) {

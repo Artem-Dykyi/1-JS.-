@@ -130,7 +130,7 @@ class CarTesla {
         this.price = price
     }
 
-    static getSpecs(car) {
+    getSpecs(car) {
         console.log(`Max Speed: ${car.maxSpeed}, Speed: ${car.speed}, Is On: ${car.isOn}, Distance: ${car.distance}, Price: ${car.price}`);
     }
 

@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./js/event-task.css">
     <title>Document</title>
 </head>
 <body>
-    <button type="button" class="button-test">cat</button>
+    <!-- <button type="button" class="button-test">cat</button>
     <p class="p-test">orange</p>
 
     <h1 class ="img-title">fox in snow</h1>
     <img src="https://naturecanada.ca/wp-content/uploads/2022/01/January-2022-3-768x498.png" alt="fox" class="main-img-fox">
 
     <a href="https://cats.com/white-cat-breeds" class="link-Cat">about cat</a>
-    <img src="https://media.cnn.com/api/v1/images/stellar/prod/220928160118-20-spicy-dishes-birds-eye-chilis.jpg?c=original&q=h_447,c_fill" alt="" class="spicy-food-red">
+    <img src="https://media.cnn.com/api/v1/images/stellar/prod/220928160118-20-spicy-dishes-birds-eye-chilis.jpg?c=original&q=h_447,c_fill" alt="" class="spicy-food-red"> -->
 
-    <ul>
+    <!-- <ul>
         <li>Перший </li>
         <li>Другий кіт </li>
         <li>Третій кіт</li>
     </ul>
-<!-- 1 -->
+1
     <ul id="categories">
         <li class="item">
             <ul>
@@ -50,19 +51,55 @@
             </ul>
         </li>
     </ul>
-<!-- 2 -->
+2
     <ul id="ingredients"></ul>
 
-<!-- 3 -->
+ 3 
     <ul id="gallery"></ul>
 
-<!-- 4  -->
+ 4  
     <div id="counter">
         <button type="button" data-action="decrement">-1</button>
         <span id="value">0</span>
         <button type="button" data-action="increment">+1</button>
-    </div>
+    </div> -->
 
+<!-- //////////////////////////////////////// -->
+
+    <button class="button" data-action="open-modal">Відкрити модалку</button>
+
+        <div class="backdrop js-backdrop">
+            <div class="modal">
+                <h2>Modl window</h2>
+                <p>mnimutachku vnimaniya</p>
+                <button type="button" class="button" data-action="close-modal">Закрити</button>
+            </div>
+        </div>
+
+
+        <form action="">
+            <p>Choose a color:</p>
+            <label>
+                <input type="radio" name="color" value="red" checked> Red
+            </label>
+            <label>
+                <input type="radio" name="color" value="yellow" checked> Yellow
+            </label>
+            <label>
+                <input type="radio" name="color" value="green" checked> Green
+            </label>
+        </form>
+
+        <form action="" class="formName">
+            <input type="text" placeholder="Ваше ім'я?" id="name-input" name="userName">
+            <button type="submit">Відправити ім'я</button>
+            <h1>Привіт, <span id="name-output">незнайомець</span></h1>
+        </form>
+
+        <input id="font-size-control" type="range" min="10" max="100" value="16">
+        <br>
+        <span id="text">Абрака</span>
+        
     <!-- <script type="module" src="./js/task.js"></script> -->
     <!-- <script type="module" src="./js/second-task.js"></script> -->
      <!-- <script type="module" src="./js/string-task.js"></script> -->
@@ -80,7 +117,8 @@
     <!-- <script type="module" src="./js/sorting-method-task.js"></script> -->
     <!-- <script type="module" src="./js/oop-task/constucture-function-task.js"></script> -->
     <!-- <script type="module" src="./js/dom-task.js"></script> -->
-    <script type="module" src="./js/dom2-task.js"></script>
+    <!-- <script type="module" src="./js/dom2-task.js"></script> -->
+    <script type="module" src="./js/event-task.js"></script> 
 
 
 </body>

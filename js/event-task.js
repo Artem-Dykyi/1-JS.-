@@ -1,3 +1,23 @@
+const openModalBtn = document.querySelector('[data-action="open-modal"]');
+const closeModalBtn = document.querySelector('[data-action="close-modal"]');
+const backdrop = document.querySelector('.backdrop');
+
+openModalBtn.addEventListener("click", () => {
+    document.body.classList.add("show-modal");
+});
+
+closeModalBtn.addEventListener("click", () => {
+    document.body.classList.remove("show-modal");
+});
+
+backdrop.addEventListener("click", (event) => {
+    if (event.target === backdrop) {
+        document.body.classList.remove("show-modal");
+    }
+});
+
+
+
 const redInput = document.querySelector('input[type="radio"][name="color"][value="red"]');
 const yellowInput = document.querySelector('input[type="radio"][name="color"][value="yellow"]');
 const greenInput = document.querySelector('input[type="radio"][name="color"][value="green"]');
@@ -28,6 +48,26 @@ forName.addEventListener("submit", (event) => {
     console.log(inputForNameData)
     nameOutput.textContent = inputForNameData.name
 })
+
+
+
+const validationInput = document.querySelector("#validation-input")
+
+validationInput.addEventListener("blur", () => {
+    const requiredLength = parseInt(validationInput.getAttribute("data-length"));
+    const inputLength = validationInput.value.length;
+
+    if (inputLength === requiredLength) {
+        validationInput.classList.add("valid");
+        validationInput.classList.remove("invalid");
+    }
+     else {
+        validationInput.classList.add("invalid");
+        validationInput.classList.remove("valid");
+    }
+    
+})
+
 
 
 const fontSizeControl = document.querySelector("#font-size-control"); 

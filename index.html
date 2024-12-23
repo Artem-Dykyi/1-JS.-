@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./js/event-task.css">
+    <link rel="stylesheet" href="./js/event-mouse.css">
     <title>Document</title>
 </head>
 <body>
@@ -100,10 +101,49 @@
 
         <input type="text" id="validation-input" data-length="6" placeholder="Веди 6 символів">
 
-        
+
         <input id="font-size-control" type="range" min="10" max="100" value="16">
         <br>
         <span id="text">Абрака</span>
+
+
+
+
+        <ul class="gallery">
+            <li>
+                <img class="image" src="https://images.pexels.com/photos/4617294/pexels-photo-4617294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+                " alt="зображення">
+            </li>
+            <li>
+                <img class="image" src="https://images.pexels.com/photos/4617294/pexels-photo-4617294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+                " alt="зображення">
+            </li>
+            <li>
+                <img class="image" src="https://images.pexels.com/photos/11815778/pexels-photo-11815778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+                " alt="зображення">
+            </li>
+            <li>
+                <img class="image" src="https://images.pexels.com/photos/6195166/pexels-photo-6195166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                alt="зображення">
+            </li>
+            <li>
+                <img class="image" src="https://images.pexels.com/photos/6957926/pexels-photo-6957926.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                alt="зображення">
+            </li>
+            <li>
+                <img class="image" src="https://images.pexels.com/photos/15520825/pexels-photo-15520825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                alt="зображення">
+            </li>
+        </ul>
+
+
+        <div id="controls">
+            <input type="number" min="0" max="100" step="1" placeholder="Кількість елементів" />
+            <button type="button" data-action="render">Створити</button>
+            <button type="button" data-action="destroy">Очистити</button>
+        </div>
+        
+        <div id="boxes"></div>
         
     <!-- <script type="module" src="./js/task.js"></script> -->
     <!-- <script type="module" src="./js/second-task.js"></script> -->
@@ -123,7 +163,9 @@
     <!-- <script type="module" src="./js/oop-task/constucture-function-task.js"></script> -->
     <!-- <script type="module" src="./js/dom-task.js"></script> -->
     <!-- <script type="module" src="./js/dom2-task.js"></script> -->
-    <script type="module" src="./js/event-task.js"></script> 
+    <!-- <script type="module" src="./js/event-task.js"></script> -->
+    <script type="module" src="./js/event-mouse-task.js"></script>
+
 
 
 </body>

@@ -31,9 +31,9 @@ function createBoxes(amount) {
 
     for(let i = 0; i < amount; i++) {
         const box = document.createElement("div")
-        box.style.weight = `$${size}px`
-        box.style.height= `$${size}px`
-        box.style.bacgraundColor = randomColor()
+        box.style.backgroundColor = randomColor()
+        box.style.width = `${size}px`
+        box.style.height = `${size}px`
         boxes.push(box);
         size += 10;
     }
@@ -46,11 +46,14 @@ function destroyBoxes(){
 
 createBtn.addEventListener("click", () => {
     const checkAmount = Number(countElement.value)
-    if(checkAmount === amount){
-        createBoxes()
+    if (checkAmount > 0) {
+        createBoxes(checkAmount);
     }
 })
 
 deleteBtn.addEventListener("click", () => {
     destroyBoxes()
 })
+
+
+

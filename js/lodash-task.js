@@ -11,13 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.addEventListener("DOMContentLoaded", function () {
-    const input = document.querySelector(".slider__input")
+    const slider = document.querySelector(".slider__input")
     const img = document.querySelector(".slider__image")
 
     const sizeImg = _.debounce((size) => {
         img.style.width = `${size}px`;
         img.style.height = `${size}px`;
-    }, 200)
+    }, 50)
 
     slider.addEventListener("input", (event) => {
         sizeImg(event.target.value);

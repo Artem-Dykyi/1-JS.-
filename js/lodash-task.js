@@ -1,27 +1,23 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const box = document.getElementById("box");
-  
-    const moveBox = _.debounce((x, y) => {
-      box.style.transform = `translate(${x}px, ${y}px)`;
-    }, 50); 
-  
-    document.addEventListener("mousemove", (event) => {
-      moveBox(event.clientX, event.clientY);
-    });
-  });
-
-  document.addEventListener("DOMContentLoaded", function () {
     const slider = document.querySelector(".slider__input")
     const img = document.querySelector(".slider__image")
+    const box = document.getElementById("box");
 
-    const sizeImg = _.debounce((size) => {
-        img.style.width = `${size}px`;
-        img.style.height = `${size}px`;
-    }, 50)
 
-    slider.addEventListener("input", (event) => {
-        sizeImg(event.target.value);
-      });
-  })
+    const imgSize = (event) => {
+        const size = event.target.value + "px";
+        img.style.width =`${size}`
+        img.style.height =`${size}`
+    }
+    slider.addEventListener("input", _.debounce(imgSize, 50) )
 
-  
+
+
+    const moveBox = (event) => {
+        box.style.transform = `translate(${event.clientX}px, ${event.clientY}px)`
+    }
+
+    document.addEventListener("mousemove", _.debounce(moveBox, 50))
+
+
+
+    
